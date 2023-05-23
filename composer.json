@@ -1,0 +1,20 @@
+{
+    "name": "storeways/shipper",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Storeways\\Shipper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Karim Mohamed",
+            "email": "komicho1996@gmail.com"
+        }
+    ],
+    "require": {}
+}
