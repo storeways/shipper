@@ -1,5 +1,6 @@
 {
     "name": "storeways/shipper",
+    "description": "The module manages countries and cities, the cost of shipping for each region, and the integration of shipping methods.",
     "type": "library",
     "license": "MIT",
     "autoload": {
