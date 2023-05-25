@@ -26,14 +26,8 @@ Registrar::module(
             $links->addLink(
                 icon:'map-2',
                 name:'Cities',
-                route:'dashboard',
+                route:'sw.shipper.city.index',
                 order:20,
-            ),
-            $links->addLink(
-                icon:'cash',
-                name:'Costs',
-                route:'dashboard',
-                order:30,
             ),
         ];
     },
