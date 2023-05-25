@@ -15,7 +15,7 @@ return new class extends MigrationBase
     {
         Schema::create($this->prefix . 'storeways_shipper_countries', function (Blueprint $table) {
             $table->id();
-            $table->string('country_code', 2)->index()->unique()->nullable();
+            $table->string('country_code', 2)->index()->unique();
             $table->string('name');
             $table->timestamps();
         });

@@ -1,6 +1,9 @@
 <?php
 
 use StorePHP\StoreWays\Registrar;
+use Storeways\Shipper\Http\Livewire\Cities\CitiesIndex;
+use Storeways\Shipper\Http\Livewire\Cities\CityCreate;
+use Storeways\Shipper\Http\Livewire\Cities\CityUpdate;
 use Storeways\Shipper\Http\Livewire\Countries\CountriesIndex;
 use Storeways\Shipper\Http\Livewire\Countries\CountryCreate;
 use Storeways\Shipper\Http\Livewire\Countries\CountryUpdate;
@@ -38,5 +41,9 @@ Registrar::module(
         'storeways-shipper-country-index' => CountriesIndex::class,
         'storeways-shipper-country-create' => CountryCreate::class,
         'storeways-shipper-country-update' => CountryUpdate::class,
+
+        'storeways-shipper-city-index' => CitiesIndex::class,
+        'storeways-shipper-city-create' => CityCreate::class,
+        'storeways-shipper-city-update' => CityUpdate::class,
     ]
 );

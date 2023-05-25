@@ -17,6 +17,7 @@ return new class extends MigrationBase
             $table->id();
             $table->foreignId('country_id')->constrained($this->prefix . 'storeways_shipper_countries')->cascadeOnDelete();
             $table->string('name');
+            $table->decimal('shipping_charges', 10, 2)->comment('Shipping charges')->nullable();
             $table->timestamps();
         });
     }

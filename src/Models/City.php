@@ -21,5 +21,11 @@ class City extends ModelBase
     protected $fillable = [
         'country_id',
         'name',
+        'shipping_charges',
     ];
+
+    public function country()
+    {
+        return $this->hasOne(Country::class, 'id', 'country_id');
+    }
 }
