@@ -22,4 +22,9 @@ class Country extends ModelBase
         'country_code',
         'name',
     ];
+
+    public function cities()
+    {
+        return $this->hasMany(City::class, 'country_id', 'id');
+    }
 }

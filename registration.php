@@ -1,7 +1,9 @@
 <?php
 
 use StorePHP\StoreWays\Registrar;
+use Storeways\Shipper\Http\Livewire\Countries\CountriesIndex;
 use Storeways\Shipper\Http\Livewire\Countries\CountryCreate;
+use Storeways\Shipper\Http\Livewire\Countries\CountryUpdate;
 
 Registrar::module(
     id:'storewys_shipper',
@@ -11,13 +13,14 @@ Registrar::module(
     sidebar:[
         'icon' => 'cube-send',
         'name' => 'Shipper',
+        'order' => 700,
     ],
     menu:function ($links) {
         return [
             $links->addLink(
                 icon:'world',
                 name:'Countries',
-                route:'dashboard',
+                route:'sw.shipper.country.index',
                 order:10,
             ),
             $links->addLink(
@@ -36,8 +39,10 @@ Registrar::module(
     },
     migrations:__DIR__ . '/database/migrations',
     routes:['shipper', __DIR__ . '/routes/web.php'],
-    // views:['shipper', __DIR__ . '/views'],
+    views:['storephp-shipper', __DIR__ . '/resources/views'],
     livewireComponents:[
+        'storeways-shipper-country-index' => CountriesIndex::class,
         'storeways-shipper-country-create' => CountryCreate::class,
+        'storeways-shipper-country-update' => CountryUpdate::class,
     ]
 );

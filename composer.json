@@ -17,5 +17,7 @@
             "email": "komicho1996@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "outhebox/blade-flags": "^1.2"
+    }
 }

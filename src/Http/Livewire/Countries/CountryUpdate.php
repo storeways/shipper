@@ -7,13 +7,25 @@ use Storeways\Shipper\Models\Country;
 use Store\Dashboard\Builder\Contracts\hasGenerateFields;
 use Store\Dashboard\Builder\FormBuilder;
 
-class CountryCreate extends FormBuilder implements hasGenerateFields
+class CountryUpdate extends FormBuilder implements hasGenerateFields
 {
     use LivewireAlert;
 
     protected $pagePretitle = 'Shipper';
 
-    protected $pageTitle = 'Create new country';
+    protected $pageTitle = 'Update this country';
+
+    public $country;
+
+    public $country_code;
+    public $name;
+
+    public function mount(Country $country)
+    {
+        $this->country = $country;
+        $this->country_code = $country->country_code;
+        $this->name = $country->name;
+    }
 
     public function generateFields($form)
     {
@@ -37,8 +49,8 @@ class CountryCreate extends FormBuilder implements hasGenerateFields
     {
         $validatedData = $this->validate();
 
-        Country::create($validatedData);
+        $this->country->update($validatedData);
 
-        return $this->alert('success', 'Saved!');
+        return $this->alert('success', 'Updated!');
     }
 }
