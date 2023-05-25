@@ -9,7 +9,7 @@
                         Shipper
                     </div>
                     <h2 class="page-title">
-                        Cities List
+                        Cities List (for {{ $country->name ?? 'all countries' }})
                     </h2>
                 </div>
                 <!-- Page title actions -->

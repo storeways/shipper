@@ -91,6 +91,10 @@
                                             </td>
                                             <td>
                                                 <div class="btn-list flex-nowrap">
+                                                    <a href="{{ route('sw.shipper.country.cities', [$country]) }}"
+                                                        class="btn btn-info">
+                                                        Cities
+                                                    </a>
                                                     <a href="{{ route('sw.shipper.country.update', [$country]) }}"
                                                         class="btn">
                                                         Edit
