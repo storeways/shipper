@@ -19,5 +19,12 @@
     ],
     "require": {
         "outhebox/blade-flags": "^1.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Storeways\\Shipper\\ShipperServiceProvider"
+            ]
+        }
     }
 }
