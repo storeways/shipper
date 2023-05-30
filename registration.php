@@ -1,6 +1,9 @@
 <?php
 
 use StorePHP\StoreWays\Registrar;
+use Storeways\Shipper\Http\Livewire\Account\AccountCreate;
+use Storeways\Shipper\Http\Livewire\Account\AccountsIndex;
+use Storeways\Shipper\Http\Livewire\Account\AccountUpdate;
 use Storeways\Shipper\Http\Livewire\Cities\CitiesIndex;
 use Storeways\Shipper\Http\Livewire\Cities\CityCreate;
 use Storeways\Shipper\Http\Livewire\Cities\CityUpdate;
@@ -32,6 +35,12 @@ Registrar::module(
                 route:'sw.shipper.city.index',
                 order:20,
             ),
+            $links->addLink(
+                icon:'api-app',
+                name:'Accounts',
+                route:'sw.shipper.accounts.index',
+                order:20,
+            ),
         ];
     },
     migrations:__DIR__ . '/database/migrations',
@@ -45,5 +54,9 @@ Registrar::module(
         'storeways-shipper-city-index' => CitiesIndex::class,
         'storeways-shipper-city-create' => CityCreate::class,
         'storeways-shipper-city-update' => CityUpdate::class,
+
+        'storeways-shipper-account-index' => AccountsIndex::class,
+        'storeways-shipper-account-create' => AccountCreate::class,
+        'storeways-shipper-account-update' => AccountUpdate::class,
     ]
 );
